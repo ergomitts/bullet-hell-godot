@@ -1,6 +1,6 @@
 extends Node
 
-const MAX_BULLETS = 2001
+const MAX_BULLETS = 10001
 
 onready var bullet = preload("res://Objects/Bullets/EBullet2.tscn")
 onready var coin = preload("res://Objects/Coin.tscn")
