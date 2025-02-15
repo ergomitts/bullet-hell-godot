@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Singletons/Game.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Scroller.tscn" type="PackedScene" id=2]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 216, 384 )
+current = true
+
+[node name="Scroller" parent="." instance=ExtResource( 2 )]

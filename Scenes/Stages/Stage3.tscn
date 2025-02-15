@@ -1,0 +1,357 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Objects/Enemies/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Stages/Stage.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Objects/Enemy.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/crow.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 14.6667 )
+
+[node name="Stage3" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Enemy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 641, -50 )
+attack_type = 0
+speed = 300.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( -50, -50 ),
+"wait": 0
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 60, 70 ),
+"wait": 2
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 5
+
+[node name="Enemy2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 641, -50 )
+attack_type = 2
+speed = 300.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( -50, -50 ),
+"wait": 2
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 60, 70 ),
+"wait": 2
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 5
+
+[node name="Enemy3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 641, -50 )
+attack_type = 0
+speed = 200.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( -50, -50 ),
+"wait": 4
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 60, 70 ),
+"wait": 0
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 5
+
+[node name="Enemy6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 641, -50 )
+attack_type = 0
+speed = 200.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( -50, -50 ),
+"wait": 4.5
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 60, 70 ),
+"wait": 0
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 5
+
+[node name="Enemy7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 688, 247 )
+attack_type = 2
+speed = 400.0
+enter_path = [ {
+"active": true,
+"bullet_speed": 8,
+"firing": false,
+"pos": Vector2( -150, 200 ),
+"wait": 4.5
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 650, 200 ),
+"wait": 0
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 3
+
+[node name="Enemy8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 688, 247 )
+attack_type = 2
+speed = 400.0
+enter_path = [ {
+"active": true,
+"bullet_speed": 8,
+"firing": false,
+"pos": Vector2( -150, 200 ),
+"wait": 7.0
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 650, 200 ),
+"wait": 0
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 3
+
+[node name="Enemy9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 688, 247 )
+attack_type = 0
+speed = 400.0
+enter_path = [ {
+"active": true,
+"bullet_speed": 8,
+"firing": false,
+"pos": Vector2( -150, 200 ),
+"wait": 8.0
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 650, 200 ),
+"wait": 0
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 3
+
+[node name="Enemy10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 688, 247 )
+attack_type = 2
+speed = 400.0
+enter_path = [ {
+"active": true,
+"bullet_speed": 8,
+"firing": false,
+"pos": Vector2( -150, 200 ),
+"wait": 9.0
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 650, 200 ),
+"wait": 0
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 3
+
+[node name="Enemy11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 216, 300 )
+hit_points = 30
+attack_type = 2
+speed = 400.0
+enter_path = [ {
+"active": false,
+"bullet_speed": 8,
+"firing": false,
+"pos": Vector2( -150, 200 ),
+"wait": 9.0
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 216, 300 ),
+"wait": 5
+}, {
+"exit": true,
+"pos": Vector2( 400, -40 )
+} ]
+attack_path = [  ]
+attack_speed = 3
+
+[node name="Enemy12" type="StaticBody2D" parent="." groups=["enemy"]]
+position = Vector2( 402, 50 )
+script = ExtResource( 3 )
+hit_points = 450
+speed = 50.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( 216, -90 ),
+"wait": 16.0
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 216, 50 ),
+"wait": 0
+} ]
+attack_path = [ {
+"attack_speed": 5,
+"attack_type": 0,
+"firing": true,
+"pos": Vector2( 32, 64 ),
+"speed": 300,
+"wait": 0.1
+}, {
+"attack_speed": 4,
+"attack_type": 1,
+"firing": true,
+"pos": Vector2( 200, 105 ),
+"speed": 150,
+"wait": 1.0
+}, {
+"attack_speed": 1,
+"attack_type": 2,
+"firing": true,
+"pos": Vector2( 32, 64 ),
+"speed": 150,
+"wait": 5.0
+}, {
+"attack_speed": 5.0,
+"attack_type": 0,
+"firing": true,
+"pos": Vector2( 400, 64 ),
+"speed": 300,
+"wait": 0.1
+}, {
+"attack_speed": 3,
+"attack_type": 2,
+"firing": true,
+"pos": Vector2( 400, 50 ),
+"speed": 700,
+"wait": 10
+} ]
+attacker = true
+enter_time = 10
+slices = 14
+
+[node name="Sprite" type="Sprite" parent="Enemy12"]
+position = Vector2( -1, 2.00003 )
+scale = Vector2( 0.224371, 0.224371 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy12"]
+position = Vector2( -2, -1 )
+scale = Vector2( 3, 5 )
+shape = SubResource( 1 )
+
+[node name="LaunchPoint" type="Position2D" parent="Enemy12"]
+rotation = 1.5708
+
+[node name="Tween" type="Tween" parent="Enemy12"]
+
+[node name="Cycle" type="Timer" parent="Enemy12"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Wait" type="Timer" parent="Enemy12"]
+one_shot = true
+
+[node name="Enemy4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 378, 81 )
+attack_type = 2
+speed = 300.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( 515, -50 ),
+"wait": 0
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 380, 70 ),
+"wait": 2
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 5
+
+[node name="Enemy5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 378, 81 )
+attack_type = 2
+speed = 300.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( 515, -50 ),
+"wait": 3
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 380, 70 ),
+"wait": 2
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 5
+
+[node name="Enemy13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 378, 81 )
+attack_type = 2
+speed = 300.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( 515, -50 ),
+"wait": 5
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 380, 70 ),
+"wait": 2
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 5
+
+[node name="Enemy14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 378, 81 )
+attack_type = 2
+speed = 300.0
+enter_path = [ {
+"active": false,
+"firing": false,
+"pos": Vector2( 515, -50 ),
+"wait": 7
+}, {
+"active": true,
+"firing": true,
+"pos": Vector2( 380, 70 ),
+"wait": 2
+}, {
+"exit": true,
+"pos": Vector2( 650, -50 )
+} ]
+attack_speed = 5
